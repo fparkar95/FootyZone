@@ -1,14 +1,18 @@
 class PostsController < ApplicationController
     
+    before_action :authenticate_user!
+    before_action :set_post, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
+    
     def index
         
-        @posts = Post.all
+        @posts = Post.order("created_at DESC").all
         
     end
     
     def new
        
        @post = Post.new
+       @comment = Comment.new(post_id: params[:post_id])
         
     end
     
@@ -38,6 +42,18 @@ class PostsController < ApplicationController
       redirect_to root_path
     end
     
+     def upvote
+         
+         @post.upvote_from current_user
+         redirect_to root_path
+         
+     end
+     
+     def downvote
+         
+         @post.downote_from current_user
+         redirect_to root_path
+     end
      
     
     private
@@ -46,6 +62,10 @@ class PostsController < ApplicationController
     
     params.require(:post).permit(:image,:caption)
     
+    end
+    
+    def set_post
+        @post = Post.find(params[:id])
     end
     
 end

@@ -1,7 +1,7 @@
 
 <head>
   
-  <link rel="stylesheet" href= "main.css">
+  <link rel="stylesheet" href= "posts.scss">
 </head>
 
 <body>
@@ -14,9 +14,11 @@
       </div>
 </div>
 
-<div class="container-flex";>
+
     
 <% @posts.each do |post| %>
+
+<div class="container-flex";>
 <br>
 <%= link_to 'Edit', edit_post_path(post) %>
 <%= link_to 'Show', post %>
@@ -24,13 +26,20 @@
              post_path(post), 
                          method: :delete, 
                          data: { confirm: 'Are you sure?' } %> 
+<br>
 <%= image_tag post.image.url(:medium) %>
-
+<br>
 <%= post.caption %>
+<br>
+
+<%=link_to like_post_path(post), class: "like-btn", method: :put do%>
+<span class="likebtn-wrapper" data-identifier="item_1"></span>
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
 
 <br>
 
 <% end %>
+<%end%>
 
 </div>
 </body>

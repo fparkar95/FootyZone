@@ -35,6 +35,8 @@ gem 'simple_form'
 
 gem 'devise'
 
+gem 'acts_as_votable', '~> 0.11.1'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
