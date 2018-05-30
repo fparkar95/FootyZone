@@ -1,0 +1,98 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* ------------------------------------ Click on login and Sign Up to  changue and view the effect
+---------------------------------------
+*/
+body{
+  font-family: 'Open Sans', sans-serif;
+  background:#3498db;
+  margin: 0 auto 0 auto;  
+  width:100%; 
+  text-align:center;
+  background-image: url("russia-2018.png");   
+    
+}
+
+p{
+  font-size:12px;
+  text-decoration: none;
+  color:#ffffff;
+}
+
+h1{
+  font-size:1.5em;
+  color:#AAAAAA;
+  border: #ccc 1px solid;
+  border-bottom: #ccc 2px solid;
+  margin-top:10px;
+  font-size:1em;
+  border-radius:4px;
+  background: black;
+}
+
+.box{
+  background:black;
+  width:50%;
+  height:100px;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.email{
+  background: black;
+  color:#AAAAAA;
+  font-size:1em;
+
+}
+
+.password{
+ 
+  background:black;
+
+  font-size:1em;
+  color:#AAAAAA;
+  
+}
+
+.btn{
+  background:#2ecc71;
+  width:125px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #27ae60 1px solid;
+  
+  margin-top:20px;
+  margin-bottom:20px;
+  float:center;
+  margin-left:16px;
+  font-weight:800;
+  font-size:0.8em;
+}
+
+.btn:hover{
+  background:#2CC06B; 
+}
+
+#btn2{
+  float:left;
+  background:#3498db;
+  width:125px;  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #2980b9 1px solid;
+  
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-left:10px;
+  font-weight:800;
+  font-size:0.8em;
+}
+
+#btn2:hover{ 
+background:#3594D2; 
+}
